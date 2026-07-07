@@ -15,14 +15,19 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "TimeSeriesReact",
-      formats: ["es", "cjs"],
-      fileName: (format) => `index.${format}.js`,
+      formats: ["es"],
+      fileName: () => "index.js",
     },
     rollupOptions: {
       external: (id) =>
-        ["react", "react-dom", "@emotion/react", "@emotion/styled"].includes(
-          id,
-        ) || id.startsWith("@mui/"),
+        [
+          "react",
+          "react-dom",
+          "react/jsx-runtime",
+          "react/jsx-dev-runtime",
+          "@emotion/react",
+          "@emotion/styled",
+        ].includes(id) || id.startsWith("@mui/"),
     },
   },
 });
