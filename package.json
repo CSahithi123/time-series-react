@@ -1,6 +1,6 @@
 {
   "name": "csahithi-time-series-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Reusable React time series plotting component",
   "type": "module",
   "main": "./dist/index.cjs",
