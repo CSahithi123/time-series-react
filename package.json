@@ -1,5 +1,5 @@
 {
-  "name": "@csahithi/time-series-react",
+  "name": "csahithi-time-series-react",
   "version": "1.0.0",
   "description": "Reusable React time series plotting component",
   "type": "module",
