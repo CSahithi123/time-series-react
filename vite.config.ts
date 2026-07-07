@@ -19,14 +19,10 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: [
-        "react",
-        "react-dom",
-        "@mui/material",
-        "@mui/icons-material",
-        "@emotion/react",
-        "@emotion/styled",
-      ],
+      external: (id) =>
+        ["react", "react-dom", "@emotion/react", "@emotion/styled"].includes(
+          id,
+        ) || id.startsWith("@mui/"),
     },
   },
 });
